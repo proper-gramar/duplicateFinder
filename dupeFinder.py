@@ -4,18 +4,16 @@ import cv2
 import os
 import shutil
 
-# loop through library once, convert each histogram to a hash, store each value in a map, convert hashmap to a set.
-# duplicate will be removed when entered.
+# 11/7/2020 - Conceptually works, can tell if image[0] & image[1] are duplicates or unique
+# facing index out of bounds error - line 47
+# Data structure needs to be changed for faster runtime
 
 
-##########################################
-# import image
 
-# converting to gray image
-
-# finding histogram
+# finding histograms
 # histograms are graphs of a distribution of data designed to show centering, dispersion(spread),
 # and shape(relative frequency) of the data. Histograms provide a visual display of large amounts of data
+
 # store each histogram in a dictionary, compare data in O(log N)?
 
 # storing in list/array for time being...
@@ -84,12 +82,3 @@ def looper():
 filepath = 'images'
 looper()
 
-# 11/7/2020 Progress is left at
-
-
-# comparing photos
-# for histogram in image_array:
-#     i = 0
-#     # terrible conversion. string of the converted int + 1
-#     compare(image_array[i], image_array[i+1])
-#     i += 1
